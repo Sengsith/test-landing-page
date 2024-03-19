@@ -2,7 +2,15 @@
 
 Dummy landing page created using the project details provided by [The Odin Project](https://www.theodinproject.com/lessons/foundations-landing-page).
 
-## Before attempting project
+## Table of Contents
+
+- [Before attempting project](#before-the-attempt)
+- [Durring the attempt](#during-attempt)
+  - [Header](#header)
+  - [Hero](#hero)
+  - [Members Info](#members-info)
+
+## Before the attempt
 
 Below is what the landing page template looks like and will be following it as a guide. I will try my best to only use use flexbox wherever it seems ideal to do so. Might pull images from one of my hobbies for motivation.
 ![Template](./notes/01.png)
@@ -14,7 +22,7 @@ Below is the typography:
 
 ### Header
 
-I had a little trouble figuring out how to get the background color for the header to stretch the whole screen while also making sure the header content doesn't exceed a specific width but also shrinks when the viewport shrinks.
+I had a little trouble figuring out how to get the `background-color` for the header to stretch the whole screen while also making sure the header content doesn't exceed a specific width but also shrinks when the viewport shrinks.
 
 ```html
 <header>
@@ -45,7 +53,7 @@ header {
 }
 ```
 
-I placed the background color inside header so it can be stretched to it's parent container which is body(entire viewport). Then I wrapped the actual header content into a container where I put a max-width to stop it from growing too big and then centering/spacing.
+I placed the `background-color` inside header so it can be stretched to it's parent container which is body(entire viewport). Then I wrapped the actual header content into a container where I put a `max-width` to stop it from growing too big and then centering/spacing.
 
 ### Hero
 
@@ -74,3 +82,27 @@ The tricky part here was trying to get the image to fit into it's parent contain
 ```
 
 This is the only way I could think of keeping equal space between the two flex children while also wrapping onto a new line whenever the image gets too small.
+
+### Members Info
+
+This section was fairly easy, I also made a big realization that it is better to use a specific width in pixels when combining width and `flex-grow`, `flex-shrink`, and `flex-basis`. Before, I used percent values which would always give me unwanted behavior due to the width value constantly changing whenever I resize the viewport. So it's overall more consistent to set a specific width when using these properties at the same time as well as `flex-wrap`.
+
+So I changed this:
+
+```css
+.hero-img {
+  min-width: 50%;
+}
+```
+
+into this:
+
+```css
+.hero-img {
+  min-width: 520px;
+}
+```
+
+I applied these changes when creating the cards for the members section as well.
+
+[BACK TO TOP](#test-landing-page)
