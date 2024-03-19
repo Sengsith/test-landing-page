@@ -9,6 +9,7 @@ Dummy landing page created using the project details provided by [The Odin Proje
   - [Header](#header)
   - [Hero](#hero)
   - [Members Info](#members-info)
+  - [Quote](#quote)
 
 ## Before the attempt
 
@@ -104,5 +105,22 @@ into this:
 ```
 
 I applied these changes when creating the cards for the members section as well.
+
+### Quote
+
+Very simple quote added near the bottom. The challenge here was fiddling with the `background-image`.
+
+```css
+.quote {
+  background-color: #e5e7eb;
+  padding-block: 5rem;
+  background-image: url(./img/yagoo.png);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: right 50% top 35%;
+}
+```
+
+There were a lot of options for background-size, but I needed it to be a specific size so putting in a value instead of `contain` or `cover` here works perfectly. And then simply moving it around using `background-position`.
 
 [BACK TO TOP](#test-landing-page)
