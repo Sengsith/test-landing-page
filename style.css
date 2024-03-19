@@ -1,10 +1,16 @@
 /* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   /* outline: 1px solid red !important; */
+}
+
+body {
+  font-family: "Almarai", sans-serif
 }
 
 header {
@@ -33,5 +39,9 @@ ul {
 a {
   color: #F9FAF8;
   text-decoration: none;
+  transition: color .1s ease-in-out;
+}
+a:hover {
+  color: hsl(186, 79%, 65%);
 }
 
