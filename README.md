@@ -46,3 +46,31 @@ header {
 ```
 
 I placed the background color inside header so it can be stretched to it's parent container which is body(entire viewport). Then I wrapped the actual header content into a container where I put a max-width to stop it from growing too big and then centering/spacing.
+
+### Hero
+
+The tricky part here was trying to get the image to fit into it's parent container while also wanting it to wrap to another line whenever it shrinks down too much.
+
+```css
+/* hero content */
+.hero-container {
+  max-width: 65rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-block: 5rem;
+}
+
+.hero-text,
+.hero-img {
+  flex: 1;
+}
+
+.hero-img {
+  min-width: 50%;
+}
+```
+
+This is the only way I could think of keeping equal space between the two flex children while also wrapping onto a new line whenever the image gets too small.
