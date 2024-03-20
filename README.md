@@ -10,6 +10,8 @@ Dummy landing page created using the project details provided by [The Odin Proje
   - [Hero](#hero)
   - [Members Info](#members-info)
   - [Quote](#quote)
+- [Last minute touch ups](#last-minute-touch-ups)
+- [Final Thoughts](#final-thoughts)
 
 ## Before the attempt
 
@@ -122,5 +124,31 @@ Very simple quote added near the bottom. The challenge here was fiddling with th
 ```
 
 There were a lot of options for background-size, but I needed it to be a specific size so putting in a value instead of `contain` or `cover` here works perfectly. And then simply moving it around using `background-position`.
+
+## Last minute touch ups
+
+Added links to all the clickable buttons and links that redirect user to the offical hololive site. I also liked the hover effect on the official site's webpage when hovering over the talent's picture so I tried to recreate it. I needed to add another wrapper div to the image itself and give that wrapper the `border` and `overflow` properties.
+
+```css
+.wrapper {
+  border: 4px solid #3882f6;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.card-img {
+  display: block;
+  transition: transform 0.15s ease-in-out;
+}
+.card-img:hover {
+  transform: scale(1.1);
+}
+```
+
+The tricky part was trying to figure out why there was extra space underneath the picture, between the `image` and the `border`. After a quick search, setting the `display` to "block" fixed it since it fills available space vertically and eliminates extra space.
+
+## Final Thoughts
+
+Very fun and slightly challenging project. It did a really great job of reminding me the basics of HTML and CSS. I tried my best to remember the best practices but just attempted my best and I think I did a great job with it. I'm glad I was able to use one of my hobbies as a motivator to finish it and want to continue exploring how to get better. I never played around before with `flex-grow`, `flex-shrink`, and `flex-basis` before so I'm glad even though this was just to remember the basics, I was still able to learn something new and I can confidently say that I will enjoy using these flex properties in the future to make great responsive layouts!
 
 [BACK TO TOP](#test-landing-page)
