@@ -195,3 +195,17 @@ h2 {
   cursor: pointer;
   background-color: #498efc;
 }
+
+footer {
+  background-color: #1F2937;
+  padding: 2.5rem;
+  color: #E5E7EB;
+  text-align: center;
+}
+
+.footer-link {
+  color: #498efc;
+}
+.footer-link:hover {
+  color: hsl(186, 79%, 65%);
+}
